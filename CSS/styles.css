@@ -1,0 +1,173 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body {
+    background-color: black;
+    color: rgb(255, 255, 255); /* This Just make all the text White*/
+    height: calc(100vh - 8em);
+    font-family: 'Anonymous Pro', monospace;  
+}
+.Top-Text {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+/* IP */
+.ip {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* Animation for niggers*/
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+  blinkTextCursor 1000ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from{width: 0;}
+  to{width: 20em;}
+}
+
+/* LINK  */
+.Social {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+  a:link {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: purple;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .Copyright {
+    position: absolute;
+    bottom: 5px;
+  }
+.absolute-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+ background-color: black;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch > h1 {
+  color: #fff;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px; 
+}
+broken feeling.
+.glitch::before {
+  /* ... anything needed to make it identical */
+
+  /* variation */
+  left: 2px;
+  text-shadow: -1px 0 red;
+  
+  /* important: opaque background masks the original */
+  background: black;
+}
+.glitch::after {
+  /* ... anything needed to make it identical */
+
+  /* variation */
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  
+  /* important: opaque background masks the original */
+  background: black;
+}
+.glitch::before {
+  clip: rect(44px, 450px, 56px, 0);
+  /*
+    Essentially a box from 0, 44px
+    to 450px, 56px
+  */
+
+  /* clip-path: inset(); needs how far you want to push in from the edges instead */
+}
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+  }
+}
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+    }
+  }
+}
+.glitch::before {
+  ...
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  ...
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+
